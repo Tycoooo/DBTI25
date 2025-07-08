@@ -196,15 +196,6 @@ public class CRUDclient {
         readers.drop();
         loans.drop();
 
-        db = mongoClient.getDatabase("firma");
-        MongoCollection<Document> personal = db.getCollection("personal");
-        MongoCollection<Document> gehalt = db.getCollection("gehalt");
-        MongoCollection<Document> abteilung = db.getCollection("abteilung");
-        MongoCollection<Document> kind = db.getCollection("kind");
-        MongoCollection<Document> maschine = db.getCollection("maschine");
-        MongoCollection<Document> praemie = db.getCollection("praemie");
-
-
         mongoClient.close();
         System.exit(0);
     }

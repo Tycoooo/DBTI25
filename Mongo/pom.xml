@@ -35,7 +35,7 @@
             <version>3.1.0</version>
             <configuration>
                 <!-- hier die Main-Methode setzen -->
-                <mainClass>fhwedel.Mongo.CRUDclient</mainClass> 
+                <mainClass>fhwedel.Mongo.FirmaDB</mainClass> 
             </configuration>
         </plugin>
     </plugins>
