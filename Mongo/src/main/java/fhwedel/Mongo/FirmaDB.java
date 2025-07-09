@@ -23,6 +23,9 @@ public class FirmaDB {
         MongoCollection<Document> personalCollection = mongoDB.getCollection("personal");
         MongoCollection<Document> maschinenCollection = mongoDB.getCollection("maschinen");
  
+        personalCollection.drop();
+        maschinenCollection.drop();
+
         String query = "SELECT * FROM personal";
 Statement stmt = conn.createStatement();
 ResultSet rs = stmt.executeQuery(query);
@@ -120,8 +123,9 @@ stmt.close();
 conn.close();
 mongoClient.close();
 
-System.out.println("Übertragung abgeschlossen.");
+System.out.println("Migration erfolgreich!");
 
+System.exit(0);
     }
 
     
